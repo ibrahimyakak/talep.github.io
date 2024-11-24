@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tedarikçi Yönetim Sistemi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Tedarikçi Yönetim Sistemi</h1>
+        </header>
+
+        <section class="form-section">
+            <h2>Yeni Talep Oluştur</h2>
+            <form id="talepForm">
+                <div class="form-group">
+                    <label for="talepEden">Talepte Bulunan Kişi:</label>
+                    <input type="text" id="talepEden" placeholder="Talep Eden Kişi" required>
+                </div>
+                <div class="form-group">
+                    <label for="talepTarihi">Talep Tarihi:</label>
+                    <input type="date" id="talepTarihi" required>
+                </div>
+                <div class="form-group">
+                    <label for="tedarikci">Tedarikçi:</label>
+                    <input type="text" id="tedarikci" placeholder="Tedarikçi" required>
+                </div>
+                <div class="form-group">
+                    <label for="tedarikciNotu">Tedarikçi Notu:</label>
+                    <textarea id="tedarikciNotu" placeholder="Notlar"></textarea>
+                </div>
+                <div id="urunListesi" class="urun-listesi"></div>
+                <button type="button" id="urunEkle" class="btn">Ürün Ekle</button>
+                <button type="submit" class="btn">Talep Gönder</button>
+            </form>
+        </section>
+
+        <section class="table-section">
+            <h2>Onay Bekleyen Talepler</h2>
+            <table id="onayBekleyenTable">
+                <thead>
+                    <tr>
+                        <th>Talep No</th>
+                        <th>Talep Tarihi</th>
+                        <th>Talepte Bulunan Kişi</th>
+                        <th>Tedarikçi</th>
+                        <th>Ürün</th>
+                        <th>Tedarik Nedeni</th>
+                        <th>Ürün Miktarı</th>
+                        <th>Toplam Tutar</th>
+                        <th>Tedarikçi Notu</th>
+                        <th>Onayla</th>
+                        <th>Red Et</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+            <h2>Kontrol Edilecek Talepler</h2>
+            <table id="kontrolEdilecekTable">
+                <thead>
+                    <tr>
+                        <th>Talep No</th>
+                        <th>Talep Tarihi</th>
+                        <th>Talepte Bulunan Kişi</th>
+                        <th>Tedarikçi</th>
+                        <th>Ürün</th>
+                        <th>Tedarik Nedeni</th>
+                        <th>Ürün Miktarı</th>
+                        <th>Toplam Tutar</th>
+                        <th>Tedarikçi Notu</th>
+                        <th>Kontrol Eden</th>
+                        <th>Kontrol Tarihi</th>
+                        <th>Kontrol Edildi</th>
+                        <th>Dosya</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+            <h2>Tamamlanmış Talepler</h2>
+            <table id="tamamlanmisTable">
+                <thead>
+                    <tr>
+                        <th>Talep No</th>
+                        <th>Talep Tarihi</th>
+                        <th>Talepte Bulunan Kişi</th>
+                        <th>Tedarikçi</th>
+                        <th>Ürün</th>
+                        <th>Tedarik Nedeni</th>
+                        <th>Ürün Miktarı</th>
+                        <th>Toplam Tutar</th>
+                        <th>Tedarikçi Notu</th>
+                        <th>Onaylayan</th>
+                        <th>Onay Tarihi</th>
+                        <th>Kontrol Eden</th>
+                        <th>Kontrol Tarihi</th>
+                        <th>Dosya</th>
+                        <th>E-Fatura</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+            <h2>Red Edilen Talepler</h2>
+            <table id="redEdilenTable">
+                <thead>
+                    <tr>
+                        <th>Talep No</th>
+                        <th>Talep Tarihi</th>
+                        <th>Talepte Bulunan Kişi</th>
+                        <th>Tedarikçi</th>
+                        <th>Ürün</th>
+                        <th>Tedarik Nedeni</th>
+                        <th>Ürün Miktarı</th>
+                        <th>Toplam Tutar</th>
+                        <th>Tedarikçi Notu</th>
+                        <th>Red Nedeni</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
